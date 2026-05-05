@@ -1,0 +1,45 @@
+name: blood-sugar-blueprint
+region: nyc
+services:
+  - name: web
+    source_dir: /
+    github:
+      repo: YOUR_GITHUB_USERNAME/blood-sugar-blueprint
+      branch: main
+      deploy_on_push: true
+    build_command: pnpm install && pnpm build
+    run_command: node scripts/start-with-cron.mjs
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    http_port: 3000
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 30
+      period_seconds: 30
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 3
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
+      - key: OPENAI_API_KEY
+        type: SECRET
+        value: YOUR_OPENAI_API_KEY
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: AMAZON_ASSOCIATE_TAG
+        value: spankyspinola-20
+      - key: DATABASE_URL
+        type: SECRET
+        value: YOUR_DATABASE_URL
+      - key: BUNNY_STORAGE_ZONE
+        type: SECRET
+        value: YOUR_BUNNY_STORAGE_ZONE
+      - key: BUNNY_API_KEY
+        type: SECRET
+        value: YOUR_BUNNY_API_KEY
+      - key: BUNNY_CDN_URL
+        value: https://YOUR_BUNNY_CDN_URL

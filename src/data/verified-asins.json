@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "lastUpdated": null,
+  "asins": {
+    "B07FMQMXDH": {
+      "title": "Keto-Mojo GK+ Glucose & Ketone Meter",
+      "category": "glucose-monitoring",
+      "tags": ["glucose", "ketone", "meter", "monitoring"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B00E9M4XEE": {
+      "title": "Contour Next Blood Glucose Monitor",
+      "category": "glucose-monitoring",
+      "tags": ["glucose", "meter", "monitoring"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "1771641487": {
+      "title": "The Diabetes Code by Jason Fung MD",
+      "category": "books",
+      "tags": ["diabetes", "reversal", "fasting", "book"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "1982179414": {
+      "title": "Glucose Revolution by Jessie Inchauspé",
+      "category": "books",
+      "tags": ["glucose", "spikes", "book"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B001HEJQZK": {
+      "title": "Thorne Research Berberine-500",
+      "category": "supplements",
+      "tags": ["berberine", "supplement", "insulin-sensitivity"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B000BD0RT0": {
+      "title": "Doctor's Best High Absorption Magnesium Glycinate",
+      "category": "supplements",
+      "tags": ["magnesium", "supplement", "insulin-sensitivity", "sleep"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B001I7MVG0": {
+      "title": "Bragg Organic Apple Cider Vinegar",
+      "category": "food",
+      "tags": ["apple-cider-vinegar", "glucose", "blood-sugar"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B01AVDVHTI": {
+      "title": "Fit Simplify Resistance Loop Bands",
+      "category": "exercise",
+      "tags": ["resistance-bands", "exercise", "strength-training"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B08CJMKRWB": {
+      "title": "WalkingPad Foldable Under-Desk Treadmill",
+      "category": "exercise",
+      "tags": ["treadmill", "walking", "post-meal", "insulin-sensitivity"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    },
+    "B000FGWFB8": {
+      "title": "NOW Foods Chromium Picolinate 200mcg",
+      "category": "supplements",
+      "tags": ["chromium", "supplement", "insulin-sensitivity"],
+      "verifiedAt": "2026-05-01T00:00:00Z",
+      "lastChecked": "2026-05-01T00:00:00Z",
+      "status": "valid",
+      "usedInArticles": []
+    }
+  },
+  "failed": {}
+}
