@@ -59,7 +59,7 @@ export function MobileHeader({ onMenuClick }: MobileHeaderProps) {
           fontWeight: 800,
           fontSize: '15px',
           color: 'var(--color-text)',
-        }}>Blood Sugar Blueprint</span>
+        }}>Glucose Managed</span>
       </Link>
 
       <Link

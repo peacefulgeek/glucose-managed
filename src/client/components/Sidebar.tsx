@@ -116,7 +116,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 color: 'var(--color-accent)',
                 letterSpacing: '0.06em',
                 textTransform: 'uppercase',
-              }}>Blueprint</div>
+              }}>Managed</div>
             </div>
           </div>
         </Link>
@@ -202,7 +202,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         {[
           { path: '/', label: 'Home', icon: '🏠' },
           { path: '/articles', label: 'All Articles', icon: '📚' },
-          { path: '/assessment', label: 'Risk Assessment', icon: '📊' },
+          { path: '/assessment', label: 'Assessments (9)', icon: '📊' },
+          { path: '/supplements', label: 'Supplements Guide', icon: '💊' },
           { path: '/tools', label: 'Recommended Tools', icon: '🛠️' },
           { path: '/about', label: 'About', icon: '👤' },
         ].map(item => (

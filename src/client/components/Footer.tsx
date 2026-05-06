@@ -33,7 +33,7 @@ export function Footer() {
                 </svg>
               </div>
               <div>
-                <div style={{ fontWeight: 800, fontSize: '14px', color: 'white' }}>Blood Sugar Blueprint</div>
+                <div style={{ fontWeight: 800, fontSize: '14px', color: 'white' }}>Glucose Managed</div>
                 <div style={{ fontSize: '11px', color: '#8AB54E', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                   Metabolic Health
                 </div>
@@ -134,7 +134,7 @@ export function Footer() {
           gap: '12px',
         }}>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)' }}>
-            © {new Date().getFullYear()} Blood Sugar Blueprint. All rights reserved.
+            © {new Date().getFullYear()} Glucose Managed. All rights reserved.
           </p>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', fontStyle: 'italic' }}>
             Written by The Oracle Lover — theoraclelover.com

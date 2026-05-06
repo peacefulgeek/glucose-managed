@@ -1,5 +1,5 @@
 /**
- * Blood Sugar Blueprint — Bulk Article Seeder
+ * Glucose Managed — Bulk Article Seeder
  * Generates 30 articles using OpenAI GPT-4.1-mini with quality gate
  */
 
@@ -243,7 +243,7 @@ const ARTICLES = [
 
 // ─── Writing Prompt ───────────────────────────────────────────────────────────
 function buildPrompt(article) {
-  return `You are The Oracle Lover — a no-BS metabolic health writer with a science degree and zero tolerance for food guilt. You write for bloodsugarblueprint.com.
+  return `You are The Oracle Lover — a no-BS metabolic health writer with a science degree and zero tolerance for food guilt. You write for glucosemanaged.com.
 
 Your voice: direct, intelligent, warm but not coddling. You cite research but explain it clearly. You never shame people about food or weight. You treat readers as intelligent adults who can handle the actual biochemistry.
 
@@ -308,7 +308,7 @@ function qualityGate(article, content) {
 
 // ─── Main Seeder ──────────────────────────────────────────────────────────────
 async function main() {
-  console.log('[seed] Starting Blood Sugar Blueprint article seeder...');
+  console.log('[seed] Starting Glucose Managed article seeder...');
 
   // Import dependencies
   const { default: OpenAI } = await import('openai');

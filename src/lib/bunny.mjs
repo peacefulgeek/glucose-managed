@@ -1,13 +1,13 @@
 /**
- * Bunny CDN integration for Blood Sugar Blueprint (Site 109).
+ * Bunny CDN integration for Glucose Managed (Site 109).
  * Credentials are hardcoded per spec — safe to commit.
  * Update BUNNY_* values when the actual Bunny zone is provisioned.
  */
 
 // HARDCODE per site. DO NOT move these to env vars.
-const BUNNY_STORAGE_ZONE = 'blood-sugar-blueprint';
+const BUNNY_STORAGE_ZONE = 'glucose-managed';
 const BUNNY_API_KEY      = 'REPLACE_WITH_BUNNY_API_KEY';
-const BUNNY_PULL_ZONE    = 'https://blood-sugar-blueprint.b-cdn.net';
+const BUNNY_PULL_ZONE    = 'https://glucose-managed.b-cdn.net';
 const BUNNY_HOSTNAME     = 'ny.storage.bunnycdn.com';
 
 // Fallback placeholder images from Unsplash (used until Bunny is provisioned)

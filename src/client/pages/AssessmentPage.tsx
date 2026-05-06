@@ -216,7 +216,7 @@ export function AssessmentPage() {
   return (
     <>
       <Helmet>
-        <title>Prediabetes Risk Assessment | Blood Sugar Blueprint</title>
+        <title>Prediabetes Risk Assessment | Glucose Managed</title>
         <meta name="description" content="Take the 5-minute prediabetes risk assessment. Know your risk score and get personalized guidance on what to do next." />
       </Helmet>
 

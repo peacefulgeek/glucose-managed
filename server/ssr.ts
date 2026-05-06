@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SITE_NAME = 'Blood Sugar Blueprint';
+const SITE_NAME = 'Glucose Managed';
 const SITE_DESCRIPTION = 'The prediabetes resource that treats you like an intelligent adult. Glucose science, protocols, and a realistic roadmap to reversing the trend.';
 
 // Cache CSS filename

@@ -1,5 +1,5 @@
 /**
- * Product catalog for Blood Sugar Blueprint (Site 109)
+ * Product catalog for Glucose Managed (Site 109)
  * Affiliate tag: spankyspinola-20
  * All ASINs are niche-relevant to prediabetes / glucose management / metabolic health.
  */

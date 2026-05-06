@@ -52,14 +52,14 @@ export function HomePage({ ssrData = {} }: HomePageProps) {
   return (
     <>
       <Helmet>
-        <title>Blood Sugar Blueprint — Prediabetes & Glucose Management</title>
+        <title>Glucose Managed — Prediabetes & Glucose Management</title>
         <meta name="description" content="The prediabetes resource that treats you like an intelligent adult. Glucose science, protocols, and a realistic roadmap to reversing the trend before it becomes a diagnosis." />
       </Helmet>
 
       {/* ─── Hero Section ─────────────────────────────────────── */}
       <section className="hero-section">
         <div className="hero-content">
-          <div className="hero-eyebrow">Blood Sugar Blueprint</div>
+          <div className="hero-eyebrow">Glucose Managed</div>
           <h1 className="hero-title">
             Prediabetes is not a life sentence.<br />
             <span style={{ color: '#8AB54E' }}>It's a warning. Act on it.</span>

@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 
 async function start() {
-  console.log('[start] Blood Sugar Blueprint starting in production mode...');
+  console.log('[start] Glucose Managed starting in production mode...');
 
   // Initialize DB
   const { initDb } = await import('../src/lib/db.mjs');

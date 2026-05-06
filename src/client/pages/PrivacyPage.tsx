@@ -6,7 +6,7 @@ export function PrivacyPage() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Blood Sugar Blueprint</title>
+        <title>Privacy Policy | Glucose Managed</title>
       </Helmet>
       <div className="page-container" style={{ maxWidth: '800px' }}>
         <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
@@ -16,7 +16,7 @@ export function PrivacyPage() {
         </p>
         <div className="article-body">
           <h2>Information We Collect</h2>
-          <p>Blood Sugar Blueprint does not collect personal information unless you voluntarily provide it. We use standard server logs that may include IP addresses and browser information for security and analytics purposes.</p>
+          <p>Glucose Managed does not collect personal information unless you voluntarily provide it. We use standard server logs that may include IP addresses and browser information for security and analytics purposes.</p>
           <h2>Cookies</h2>
           <p>We use minimal cookies for site functionality. We do not use tracking cookies or sell your data to third parties.</p>
           <h2>Affiliate Links</h2>

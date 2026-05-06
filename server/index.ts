@@ -95,7 +95,7 @@ async function createServer() {
   }
 
   app.listen(PORT, () => {
-    console.log(`[server] Blood Sugar Blueprint running on port ${PORT} (${isProd ? 'production' : 'development'})`);
+    console.log(`[server] Glucose Managed running on port ${PORT} (${isProd ? 'production' : 'development'})`);
   });
 }
 

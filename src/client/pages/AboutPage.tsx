@@ -7,8 +7,8 @@ export function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About | Blood Sugar Blueprint</title>
-        <meta name="description" content="Blood Sugar Blueprint is written by The Oracle Lover — a no-BS metabolic health educator with a science background and zero tolerance for food guilt." />
+        <title>About | Glucose Managed</title>
+        <meta name="description" content="Glucose Managed is written by The Oracle Lover — a no-BS metabolic health educator with a science background and zero tolerance for food guilt." />
       </Helmet>
 
       <div className="page-container" style={{ maxWidth: '800px' }}>
@@ -41,9 +41,9 @@ export function AboutPage() {
 
         {/* About content */}
         <div className="article-body">
-          <h2>What is Blood Sugar Blueprint?</h2>
+          <h2>What is Glucose Managed?</h2>
           <p>
-            Blood Sugar Blueprint is a metabolic health resource built on one principle:
+            Glucose Managed is a metabolic health resource built on one principle:
             <strong> you deserve to understand what's happening in your own body.</strong>
           </p>
           <p>
@@ -70,7 +70,7 @@ export function AboutPage() {
             none of it was being communicated clearly to people who needed it.
           </p>
           <p>
-            So I started writing it down. Blood Sugar Blueprint is the result.
+            So I started writing it down. Glucose Managed is the result.
           </p>
 
           <h2>Editorial Standards</h2>
@@ -93,7 +93,7 @@ export function AboutPage() {
 
           <h2>Medical Disclaimer</h2>
           <p>
-            Nothing on this site is medical advice. Blood Sugar Blueprint is an educational
+            Nothing on this site is medical advice. Glucose Managed is an educational
             resource. Prediabetes and diabetes management require the supervision of a qualified
             healthcare provider. Please consult your doctor before making changes to your diet,
             exercise routine, or medication.

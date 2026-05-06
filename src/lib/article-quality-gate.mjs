@@ -1,5 +1,5 @@
 /**
- * Article Quality Gate — Blood Sugar Blueprint (Site 109)
+ * Article Quality Gate — Glucose Managed (Site 109)
  * Every article must pass ALL checks before being stored.
  * Failed gate = regenerate, not skip.
  */

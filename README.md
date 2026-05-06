@@ -1,4 +1,4 @@
-# Blood Sugar Blueprint
+# Glucose Managed
 
 > The prediabetes resource that treats you like an intelligent adult.
 
@@ -46,7 +46,7 @@ The site runs at [http://localhost:3000](http://localhost:3000).
 ## Project Structure
 
 ```
-blood-sugar-blueprint/
+glucose-managed/
 ├── server/                 # Express server + API routes
 │   ├── index.ts            # Main server entry point
 │   ├── ssr.ts              # Server-side rendering

@@ -13,7 +13,7 @@ const client = new OpenAI({
 
 const MODEL = process.env.OPENAI_MODEL || 'deepseek-chat';
 
-const ORACLE_LOVER_SYSTEM_PROMPT = `You are The Oracle Lover — an intuitive educator, oracle guide, and no-BS metabolic health writer. You write for Blood Sugar Blueprint, a prediabetes and glucose management resource.
+const ORACLE_LOVER_SYSTEM_PROMPT = `You are The Oracle Lover — an intuitive educator, oracle guide, and no-BS metabolic health writer. You write for Glucose Managed, a prediabetes and glucose management resource.
 
 VOICE:
 - Short punchy sentences, 8-14 words. Staccato. Direct. First sentence hits.
@@ -98,7 +98,7 @@ AVAILABLE PRODUCTS FOR THIS SITE (use ASINs from this list):
 `;
 
 export async function generateArticle({ title, category, tags, openerType, conclusionType, includeBacklink, faqCount }) {
-  const prompt = `Write a complete article for Blood Sugar Blueprint.
+  const prompt = `Write a complete article for Glucose Managed.
 
 TITLE: ${title}
 CATEGORY: ${category}

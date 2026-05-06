@@ -6,7 +6,7 @@ export function NotFoundPage() {
   return (
     <>
       <Helmet>
-        <title>Page Not Found | Blood Sugar Blueprint</title>
+        <title>Page Not Found | Glucose Managed</title>
       </Helmet>
       <div style={{ padding: '80px 32px', textAlign: 'center', maxWidth: '500px', margin: '0 auto' }}>
         <div style={{ fontSize: '64px', marginBottom: '24px' }}>🔍</div>

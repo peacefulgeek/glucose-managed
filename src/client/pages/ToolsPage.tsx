@@ -98,7 +98,7 @@ export function ToolsPage() {
   return (
     <>
       <Helmet>
-        <title>Recommended Tools | Blood Sugar Blueprint</title>
+        <title>Recommended Tools | Glucose Managed</title>
         <meta name="description" content="Glucose monitors, supplements, and books that support prediabetes management. Curated by The Oracle Lover." />
       </Helmet>
 

@@ -68,8 +68,8 @@ export function ArticlesPage({ ssrData = {} }: ArticlesPageProps) {
   return (
     <>
       <Helmet>
-        <title>{pageTitle} | Blood Sugar Blueprint</title>
-        <meta name="description" content="Browse all prediabetes and glucose management articles from Blood Sugar Blueprint. Evidence-based guidance from The Oracle Lover." />
+        <title>{pageTitle} | Glucose Managed</title>
+        <meta name="description" content="Browse all prediabetes and glucose management articles from Glucose Managed. Evidence-based guidance from The Oracle Lover." />
       </Helmet>
 
       <div className="page-container">

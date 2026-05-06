@@ -1,5 +1,5 @@
 import express from 'express';
-import { buildLlmsTxt, buildLlmsFullTxt } from '../../src/lib/aeo.mjs';
+import { buildLlmsTxt, buildLlmsFullTxt, buildAiTxt } from '../../src/lib/aeo.mjs';
 
 export const llmsRouter = express.Router();
 
@@ -18,5 +18,14 @@ llmsRouter.get('/llms-full.txt', async (_req, res) => {
     res.type('text/plain').send(content);
   } catch (err) {
     res.status(500).send('Failed to generate llms-full.txt');
+  }
+});
+
+llmsRouter.get('/ai.txt', (_req, res) => {
+  try {
+    const content = buildAiTxt();
+    res.type('text/plain').send(content);
+  } catch (err) {
+    res.status(500).send('Failed to generate ai.txt');
   }
 });
