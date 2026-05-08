@@ -1,5 +1,5 @@
 # Glucose Managed — Dockerfile (Render Docker runtime)
-# cache-bust: 2026-05-08-v3
+# cache-bust: 2026-05-08-v4
 FROM node:20-alpine AS builder
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN pnpm install --frozen-lockfile
 
 # Copy source and build
 COPY . .
-RUN pnpm build
+RUN NODE_ENV=production pnpm build
 
 # ─── Production stage ────────────────────────────────────────────────────────
 FROM node:20-alpine AS production
@@ -34,6 +34,7 @@ COPY --from=builder /app/src/lib ./src/lib
 # Expose port
 EXPOSE 3000
 
+# Explicitly set NODE_ENV so isProd=true in server code
 ENV NODE_ENV=production
 ENV PORT=3000
 

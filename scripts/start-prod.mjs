@@ -109,8 +109,9 @@ async function start() {
 
     console.log('[cron] Jobs registered: quarterly revision (1 Jan/Apr/Jul/Oct 02:00), daily sitemap ping (06:00)');
   }
-
-  // ── Start the main Express/SSR server ────────────────────────────────────
+  // ── Start the main Express/SSR server ────────────────────────────────────────
+  // Guarantee NODE_ENV=production so server never tries to load Vite
+  process.env.NODE_ENV = 'production';
   await import('../dist/server/index.js');
 }
 

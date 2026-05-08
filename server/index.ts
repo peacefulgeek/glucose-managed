@@ -3,7 +3,6 @@ import compression from 'compression';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createServer as createViteServer } from 'vite';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -74,7 +73,8 @@ async function createServer() {
       }
     });
   } else {
-    // ─── Development: Vite middleware ─────────────────────────────────────────
+    // ─── Development: Vite middleware (dynamic import — not bundled into prod) ─
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'custom',
