@@ -1,4 +1,5 @@
 # Glucose Managed — Dockerfile (Render Docker runtime)
+# cache-bust: 2026-05-08-v3
 FROM node:20-alpine AS builder
 WORKDIR /app
 
