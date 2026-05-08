@@ -31,7 +31,7 @@ async function createServer() {
   app.use(compression());
   app.use(express.json({ limit: '1mb' }));
 
-  // ─── Health check (DigitalOcean requires this) ────────────────────────────
+  // ─── Health check (Render / any platform) ─────────────────────────────────
   app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok', ts: new Date().toISOString() });
   });

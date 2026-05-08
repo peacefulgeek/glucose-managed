@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { marked } from 'marked';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ReadingProgress } from '../components/ReadingProgress';
 import { AutoAffiliates } from '../components/AutoAffiliates';
 import { productCatalog } from '../../data/product-catalog';
+
+// Configure marked for clean HTML output
+marked.setOptions({ gfm: true, breaks: false });
+
+function renderMarkdown(text: string): string {
+  if (!text) return '';
+  // If already contains HTML tags, return as-is
+  if (/<(h[1-6]|p|ul|ol|li|blockquote|table|div)\b/i.test(text)) return text;
+  // Strip leading H1 (it duplicates the article title shown above)
+  const stripped = text.replace(/^#\s+[^\n]+\n?/, '').trimStart();
+  return marked.parse(stripped) as string;
+}
 
 const SITE_URL = 'https://glucosemanaged.com';
 
@@ -375,7 +388,7 @@ export function ArticlePage({ ssrData = {} }: ArticlePageProps) {
         <div
           className="article-body"
           style={{ maxWidth: '740px' }}
-          dangerouslySetInnerHTML={{ __html: article.body }}
+          dangerouslySetInnerHTML={{ __html: renderMarkdown(article.body) }}
         />
 
         {/* ─── Self-referencing line ────────────────────────── */}
@@ -435,7 +448,7 @@ export function ArticlePage({ ssrData = {} }: ArticlePageProps) {
                 {openFaq === idx && (
                   <div
                     className="faq-answer"
-                    dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    dangerouslySetInnerHTML={{ __html: renderMarkdown(faq.answer) }}
                   />
                 )}
               </div>

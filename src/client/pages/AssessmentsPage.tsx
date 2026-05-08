@@ -293,67 +293,125 @@ function AssessmentQuiz({ assessment, onBack }: { assessment: Assessment; onBack
   const progress = answers.filter(a => a !== -1).length / assessment.questions.length;
 
   if (submitted) {
+    const maxScore = assessment.questions.reduce((sum, q) => sum + Math.max(...q.options.map(o => o.points)), 0);
+    const pct = maxScore > 0 ? Math.round((totalScore / maxScore) * 100) : 0;
+    // Next steps by risk label
+    const nextStepsMap: Record<string, string[]> = {
+      'Low Risk': ['Schedule a routine A1c check at your next physical', 'Keep up your current healthy habits — they are working', 'Read our articles on maintaining long-term metabolic health', 'Consider a 2-week CGM trial to see your personal glucose patterns'],
+      'Moderate Risk': ['Ask your doctor for a fasting glucose + A1c test this month', 'Start tracking your meals for one week to spot patterns', 'Add a 10-minute walk after your largest meal each day', 'Read our articles on diet and blood sugar management'],
+      'Higher Risk': ['Book a doctor appointment this week — request A1c + fasting glucose', 'Remove ultra-processed foods and sugary drinks starting today', 'Start a 10-minute post-meal walk habit — it works immediately', 'Read our reversal protocol articles for a full action plan'],
+      'Low Indicators': ['You are doing well — maintain your current lifestyle', 'Consider periodic A1c monitoring every 1–2 years', 'Focus on sleep quality and stress management as prevention'],
+      'Some Indicators': ['Ask your doctor for a fasting insulin test alongside glucose', 'Prioritize sleep (7–9 hours) and reduce refined carbohydrates', 'Add resistance training 2x per week to improve insulin sensitivity'],
+      'Multiple Indicators': ['Consult your doctor about insulin resistance testing (HOMA-IR)', 'Consider a low-carb or Mediterranean diet approach', 'Daily movement is non-negotiable — start with 20-minute walks'],
+      'Strong Foundation': ['Keep prioritizing protein, fiber, and whole foods', 'Experiment with meal timing — eating earlier in the day helps', 'Read our monitoring articles to track your progress objectively'],
+      'Room to Grow': ['Add protein to every single meal — this is the highest-impact change', 'Replace one refined carb per day with a whole food alternative', 'Read our diet articles for specific food-swap strategies'],
+      'Needs Attention': ['Start with one change: protein at every meal', 'Eliminate sugary beverages completely — this alone can shift blood sugar', 'Read our diet and reversal articles for a step-by-step approach'],
+      'Well Managed': ['Keep your consistent sleep schedule — it is your metabolic superpower', 'Continue your stress management practice daily', 'Read our lifestyle articles to deepen your understanding'],
+      'Moderate Impact': ['Set a consistent bedtime and stick to it for 2 weeks', 'Try a 5-minute breathing practice before bed to lower cortisol', 'Read our sleep and stress articles for evidence-based strategies'],
+      'Significant Impact': ['Sleep deprivation is raising your blood sugar — prioritize this first', 'Talk to your doctor about sleep quality and cortisol testing', 'Read our lifestyle and mindset articles for a holistic approach'],
+    };
+    const steps = nextStepsMap[result.label] || ['Read our related articles for evidence-based guidance', 'Consider speaking with your healthcare provider', 'Track your progress with our other assessments'];
     return (
       <div style={{ maxWidth: '680px', margin: '0 auto' }}>
+        {/* Hero result card */}
         <div style={{
-          background: 'var(--color-card-bg)',
+          background: `linear-gradient(135deg, ${result.color}18 0%, ${result.color}06 100%)`,
           border: `3px solid ${result.color}`,
           borderRadius: '20px',
-          padding: '40px',
+          padding: '48px 40px 40px',
           textAlign: 'center',
-          marginBottom: '32px',
+          marginBottom: '20px',
+          position: 'relative',
+          overflow: 'hidden',
         }}>
-          <div style={{ fontSize: '56px', marginBottom: '16px' }}>{assessment.emoji}</div>
+          <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '180px', height: '180px', borderRadius: '50%', background: `${result.color}12` }} />
+          <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', width: '120px', height: '120px', borderRadius: '50%', background: `${result.color}08` }} />
+          <div style={{ fontSize: '64px', marginBottom: '16px', lineHeight: 1, position: 'relative' }}>{assessment.emoji}</div>
           <div style={{
             display: 'inline-block',
             background: result.color,
             color: 'white',
-            padding: '6px 20px',
+            padding: '8px 28px',
             borderRadius: '99px',
-            fontSize: '14px',
-            fontWeight: 700,
+            fontSize: '15px',
+            fontWeight: 800,
+            letterSpacing: '0.5px',
             marginBottom: '20px',
+            position: 'relative',
           }}>
             {result.label}
           </div>
-          <h2 style={{ fontSize: '26px', fontWeight: 800, marginBottom: '16px', color: 'var(--color-text)' }}>
-            {assessment.title} — Your Result
+          <h2 style={{ fontSize: '26px', fontWeight: 800, marginBottom: '14px', color: 'var(--color-text)', lineHeight: 1.3, position: 'relative' }}>
+            {assessment.title}
           </h2>
-          <p style={{ fontSize: '16px', lineHeight: 1.7, color: 'var(--color-text-muted)', marginBottom: '32px' }}>
+          <p style={{ fontSize: '16px', lineHeight: 1.75, color: 'var(--color-text-muted)', marginBottom: '28px', maxWidth: '520px', margin: '0 auto 28px', position: 'relative' }}>
             {result.message}
           </p>
-          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button
-              onClick={onBack}
-              style={{
-                background: 'transparent',
-                border: `2px solid ${assessment.color}`,
-                color: assessment.color,
-                borderRadius: '8px',
-                padding: '10px 24px',
-                fontSize: '14px',
-                fontWeight: 700,
-                cursor: 'pointer',
-              }}
-            >
-              ← All Assessments
-            </button>
-            <Link
-              to="/articles"
-              style={{
-                background: assessment.color,
-                color: 'white',
-                borderRadius: '8px',
-                padding: '10px 24px',
-                fontSize: '14px',
-                fontWeight: 700,
-                textDecoration: 'none',
-                display: 'inline-block',
-              }}
-            >
-              Read Related Articles →
-            </Link>
+          {/* Score meter */}
+          <div style={{ background: 'var(--color-bg)', borderRadius: '12px', padding: '16px 24px', display: 'inline-block', minWidth: '220px', position: 'relative' }}>
+            <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '1.2px', marginBottom: '10px' }}>Your Score</div>
+            <div style={{ height: '10px', background: 'var(--color-border)', borderRadius: '99px', overflow: 'hidden', marginBottom: '8px' }}>
+              <div style={{ height: '100%', width: `${pct}%`, background: result.color, borderRadius: '99px' }} />
+            </div>
+            <div style={{ fontSize: '13px', color: 'var(--color-text-muted)', fontWeight: 600 }}>{totalScore} / {maxScore} points ({pct}%)</div>
           </div>
+        </div>
+
+        {/* Next steps card */}
+        <div style={{
+          background: 'var(--color-card-bg)',
+          border: '1px solid var(--color-border)',
+          borderRadius: '16px',
+          padding: '28px 32px',
+          marginBottom: '16px',
+        }}>
+          <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '18px', color: 'var(--color-text)', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '22px' }}>🗺️</span> Your Personalised Next Steps
+          </h3>
+          <ol style={{ paddingLeft: '22px', margin: 0 }}>
+            {steps.map((step, i) => (
+              <li key={i} style={{ marginBottom: '12px', fontSize: '15px', lineHeight: 1.65, color: 'var(--color-text)' }}>{step}</li>
+            ))}
+          </ol>
+        </div>
+
+        {/* Medical disclaimer */}
+        <div style={{ background: '#FFFBEA', border: '1px solid #F0D060', borderRadius: '10px', padding: '14px 18px', marginBottom: '24px', fontSize: '13px', color: '#7A6000', lineHeight: 1.6 }}>
+          <strong>Important:</strong> This assessment is for educational purposes only and is not a medical diagnosis. Please consult your healthcare provider for proper testing and personalised guidance.
+        </div>
+
+        {/* CTA buttons */}
+        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button
+            onClick={onBack}
+            style={{
+              background: 'transparent',
+              border: `2px solid ${assessment.color}`,
+              color: assessment.color,
+              borderRadius: '10px',
+              padding: '12px 28px',
+              fontSize: '15px',
+              fontWeight: 700,
+              cursor: 'pointer',
+            }}
+          >
+            ← All Assessments
+          </button>
+          <Link
+            to="/articles"
+            style={{
+              background: assessment.color,
+              color: 'white',
+              borderRadius: '10px',
+              padding: '12px 28px',
+              fontSize: '15px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              display: 'inline-block',
+            }}
+          >
+            Read Related Articles →
+          </Link>
         </div>
       </div>
     );

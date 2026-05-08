@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: glucose-managed
+    runtime: node
+    region: oregon
+    plan: starter
+    buildCommand: pnpm install && pnpm build
+    startCommand: node scripts/start-prod.mjs
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: SITE_URL
+        value: https://glucosemanaged.com
+      - key: AMAZON_ASSOCIATE_TAG
+        value: spankyspinola-20
+      - key: BUNNY_CDN_URL
+        value: https://glucose-managed.b-cdn.net
+      - key: BUNNY_STORAGE_ZONE
+        value: glucose-managed
+      - key: BUNNY_STORAGE_ENDPOINT
+        value: https://ny.storage.bunnycdn.com
+      # Set these in Render dashboard (secrets):
+      # BUNNY_API_KEY
+      # OPENAI_API_KEY (for quarterly revision cron only)
+    autoDeploy: true
