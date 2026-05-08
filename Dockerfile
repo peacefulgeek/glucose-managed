@@ -1,34 +1,26 @@
-FROM node:20-alpine AS builder
+# Single-stage build — avoids multi-stage COPY cache issues on Render
+FROM node:20-alpine
 
 WORKDIR /app
 
+# Install pnpm
 RUN npm install -g pnpm
 
-COPY package.json pnpm-lock.yaml* ./
+# Install dependencies
+COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
+# Copy all source files
 COPY . .
 
-# Ensure public dir exists (images are on Bunny CDN but dir must exist)
-RUN mkdir -p public
+# Ensure public dir exists (all images served from Bunny CDN)
+RUN mkdir -p public && touch public/.gitkeep
 
+# Build client and server
 RUN pnpm build
 
-# ─── Production image ─────────────────────────────────────────────────────────
-FROM node:20-alpine AS production
-
-WORKDIR /app
-
-RUN npm install -g pnpm
-
-COPY package.json pnpm-lock.yaml* ./
-RUN pnpm install --frozen-lockfile --prod
-
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/src/data ./src/data
-COPY --from=builder /app/scripts ./scripts
-COPY --from=builder /app/src/lib ./src/lib
-COPY --from=builder /app/public ./public
+# Remove dev dependencies after build
+RUN pnpm prune --prod
 
 EXPOSE 3000
 
