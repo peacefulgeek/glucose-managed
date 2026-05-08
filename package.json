@@ -1,7 +1,7 @@
 {
   "name": "glucose-managed",
   "version": "1.0.0",
-  "description": "Glucose Managed — Prediabetes & Glucose Management Resource",
+  "description": "Glucose Managed \u2014 Prediabetes & Glucose Management Resource",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -41,7 +41,6 @@
     "@vitejs/plugin-react": "^4.2.1",
     "concurrently": "^8.2.2",
     "esbuild": "^0.21.4",
-    "sharp": "^0.34.5",
     "tsx": "^4.11.0",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
