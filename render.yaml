@@ -4,14 +4,15 @@ services:
     runtime: node
     region: oregon
     plan: starter
-    buildCommand: pnpm install && pnpm build
+    branch: main
+    buildCommand: npm install -g pnpm@9.15.9 && pnpm install --frozen-lockfile && pnpm build
     startCommand: node scripts/start-prod.mjs
     healthCheckPath: /health
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 3000
+        value: "3000"
       - key: SITE_URL
         value: https://glucosemanaged.com
       - key: AMAZON_ASSOCIATE_TAG

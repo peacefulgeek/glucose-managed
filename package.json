@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "Glucose Managed — Prediabetes & Glucose Management Resource",
   "type": "module",
-  "packageManager": "pnpm@9.15.9",
   "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "node": ">=20"
   },
   "scripts": {
     "dev": "concurrently \"pnpm dev:server\" \"pnpm dev:client\"",
@@ -18,9 +16,6 @@
     "start": "NODE_ENV=production node scripts/start-prod.mjs",
     "seed": "node scripts/bulk-seed.mjs",
     "qa": "node scripts/audit.mjs"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
   },
   "dependencies": {
     "compression": "^1.7.4",
