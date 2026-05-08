@@ -8,7 +8,7 @@ RUN npm install -g pnpm
 # Copy package files
 COPY package.json pnpm-lock.yaml* ./
 
-# Install dependencies
+# Install all dependencies (including devDeps needed for build)
 RUN pnpm install --frozen-lockfile
 
 # Copy source
@@ -30,12 +30,19 @@ COPY package.json pnpm-lock.yaml* ./
 # Install production dependencies only
 RUN pnpm install --frozen-lockfile --prod
 
-# Copy built files
+# Copy built artifacts
 COPY --from=builder /app/dist ./dist
+
+# Copy runtime data (JSON article DB, product catalog)
 COPY --from=builder /app/src/data ./src/data
+
+# Copy scripts needed at runtime (cron, start)
 COPY --from=builder /app/scripts ./scripts
+
+# Copy server libs (db.mjs, aeo.mjs etc.)
 COPY --from=builder /app/src/lib ./src/lib
-COPY --from=builder /app/public ./public
+
+# NOTE: public/ directory intentionally omitted — all images are on Bunny CDN
 
 # Expose port
 EXPOSE 3000
@@ -44,5 +51,5 @@ EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
   CMD wget -qO- http://localhost:3000/health || exit 1
 
-# Start server
-CMD ["node", "scripts/start-with-cron.mjs"]
+# Start server with cron jobs
+CMD ["node", "scripts/start-prod.mjs"]

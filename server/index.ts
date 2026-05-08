@@ -1,5 +1,6 @@
 import express from 'express';
 import compression from 'compression';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
@@ -52,8 +53,11 @@ async function createServer() {
     const distClient = path.join(ROOT, 'dist/client');
     app.use(express.static(distClient, { maxAge: '1y', etag: false }));
 
-    // Also serve public folder (images)
-    app.use(express.static(path.join(ROOT, 'public')));
+    // Serve public folder if it exists (images not on CDN)
+    const publicDir = path.join(ROOT, 'public');
+    if (fs.existsSync(publicDir)) {
+      app.use(express.static(publicDir));
+    }
 
     // SSR handler — load from same dist/server directory
     const ssrPath = path.join(__dirname, 'ssr.js');
@@ -77,8 +81,11 @@ async function createServer() {
     });
     app.use(vite.middlewares);
 
-    // Serve public folder in dev too
-    app.use(express.static(path.join(ROOT, 'public')));
+    // Serve public folder in dev if it exists
+    const publicDir = path.join(ROOT, 'public');
+    if (fs.existsSync(publicDir)) {
+      app.use(express.static(publicDir));
+    }
 
     app.get('*', async (req: any, res: any) => {
       try {
