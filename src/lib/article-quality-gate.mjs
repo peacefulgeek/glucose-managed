@@ -5,14 +5,20 @@
  */
 
 const BANNED_WORDS = [
-  'profound', 'transformative', 'holistic', 'nuanced', 'multifaceted',
-  'delve', 'tapestry', 'paradigm', 'synergy', 'leverage', 'unlock',
-  'empower', 'utilize', 'pivotal', 'embark', 'underscore', 'paramount',
-  'seamlessly', 'robust', 'beacon', 'foster', 'elevate', 'curate',
-  'curated', 'bespoke', 'resonate', 'harness', 'intricate', 'plethora',
-  'myriad', 'groundbreaking', 'innovative', 'cutting-edge', 'state-of-the-art',
-  'game-changer', 'game-changing', 'ever-evolving', 'rapidly-evolving',
-  'stakeholders', 'comprehensive'
+  "delve", "tapestry", "paradigm", "synergy", "leverage",
+  "unlock", "empower", "utilize", "pivotal", "embark",
+  "underscore", "paramount", "seamlessly", "robust", "beacon",
+  "foster", "elevate", "curate", "curated", "bespoke",
+  "resonate", "harness", "intricate", "plethora", "myriad",
+  "comprehensive", "transformative", "groundbreaking", "innovative",
+  "cutting-edge", "revolutionary", "state-of-the-art", "ever-evolving",
+  "profound", "holistic", "nuanced", "multifaceted", "stakeholders",
+  "ecosystem", "landscape", "realm", "sphere", "domain",
+  "furthermore", "moreover", "additionally", "consequently",
+  "subsequently", "thereby", "streamline", "optimize", "facilitate",
+  "amplify", "catalyze", "framework", "implement", "spearhead",
+  "bolster", "underpin", "cornerstone", "catalyst", "testament",
+  "unleash",
 ];
 
 const BANNED_PHRASES = [

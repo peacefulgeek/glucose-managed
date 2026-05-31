@@ -14,7 +14,7 @@ const __dirname = dirname(__filename);
 const ROOT = join(__dirname, '..');
 
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY,
   baseURL: process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1',
 });
 
@@ -107,7 +107,7 @@ Write the full article now. Start with the TL;DR section.`;
     temperature: 0.7,
   });
 
-  return response.choices[0].message.content;
+  return response.content[0].text;
 }
 
 function extractFaqs(body) {

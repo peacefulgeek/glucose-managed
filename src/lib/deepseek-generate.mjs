@@ -1,17 +1,17 @@
 /**
- * Writing engine — DeepSeek V3 via OpenAI client.
- * Model: deepseek-chat (maps to DeepSeek V3 / latest)
- * Base URL: https://api.deepseek.com
+ * Writing engine — Claude V3 via OpenAI client.
+ * Model: claude-chat (maps to Claude V3 / latest)
+ * Base URL: https://api.claude.com
  */
 
 import OpenAI from 'openai';
 
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || 'sk-placeholder',
-  baseURL: process.env.OPENAI_BASE_URL || 'https://api.deepseek.com',
+  apiKey: process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY || 'sk-placeholder',
+  baseURL: process.env.OPENAI_BASE_URL || 'https://api.claude.com',
 });
 
-const MODEL = process.env.OPENAI_MODEL || 'deepseek-chat';
+const MODEL = process.env.OPENAI_MODEL || 'claude-chat';
 
 const ORACLE_LOVER_SYSTEM_PROMPT = `You are The Oracle Lover — an intuitive educator, oracle guide, and no-BS metabolic health writer. You write for Glucose Managed, a prediabetes and glucose management resource.
 
@@ -122,7 +122,7 @@ Write the full article now. Output clean HTML only. Target 1,600-2,000 words.`;
     max_tokens: 4000,
   });
 
-  return response.choices[0].message.content;
+  return response.content[0].text;
 }
 
 export async function refreshArticle({ body, title, refreshType }) {
@@ -140,7 +140,7 @@ export async function refreshArticle({ body, title, refreshType }) {
     max_tokens: 4000,
   });
 
-  return response.choices[0].message.content;
+  return response.content[0].text;
 }
 
 export async function generateMetadata({ title, body }) {
@@ -158,7 +158,7 @@ Return JSON with: metaDescription (155 chars max), ogTitle (60 chars max), ogDes
   });
 
   try {
-    const text = response.choices[0].message.content;
+    const text = response.content[0].text;
     const jsonMatch = text.match(/\{[\s\S]+\}/);
     if (jsonMatch) return JSON.parse(jsonMatch[0]);
   } catch {}

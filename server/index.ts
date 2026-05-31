@@ -1,3 +1,4 @@
+import { ssrHeadMiddleware } from "../ssrHead";
 import express from 'express';
 import compression from 'compression';
 import fs from 'fs';
@@ -50,12 +51,14 @@ async function createServer() {
   if (isProd) {
     // ─── Production: serve built assets ──────────────────────────────────────
     const distClient = path.join(ROOT, 'dist/client');
-    app.use(express.static(distClient, { maxAge: '1y', etag: false }));
+    app.use(ssrHeadMiddleware);
+app.use(express.static(distClient, { maxAge: '1y', etag: false }));
 
     // Serve public folder if it exists (images not on CDN)
     const publicDir = path.join(ROOT, 'public');
     if (fs.existsSync(publicDir)) {
-      app.use(express.static(publicDir));
+      app.use(ssrHeadMiddleware);
+app.use(express.static(publicDir));
     }
 
     // SSR handler — load from same dist/server directory
@@ -84,7 +87,8 @@ async function createServer() {
     // Serve public folder in dev if it exists
     const publicDir = path.join(ROOT, 'public');
     if (fs.existsSync(publicDir)) {
-      app.use(express.static(publicDir));
+      app.use(ssrHeadMiddleware);
+app.use(express.static(publicDir));
     }
 
     app.get('*', async (req: any, res: any) => {

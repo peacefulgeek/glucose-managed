@@ -13,7 +13,7 @@ const DB_FILE = path.join(ROOT, 'src/data/articles-db.json');
 
 async function main() {
   const { default: OpenAI } = await import('openai');
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const openai = new OpenAI({ apiKey: process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY });
 
   const db = JSON.parse(readFileSync(DB_FILE, 'utf8'));
   const missingFaq = db.articles.filter(a => !a.faq || a.faq.length === 0);
@@ -32,7 +32,7 @@ async function main() {
         max_tokens: 1000,
       });
 
-      const raw = response.choices[0].message.content.trim()
+      const raw = response.content[0].text.trim()
         .replace(/^```json?\n?/, '').replace(/\n?```$/, '');
       const faqs = JSON.parse(raw);
       article.faq = faqs;

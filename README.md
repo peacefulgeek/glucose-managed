@@ -32,7 +32,7 @@ pnpm install
 cp .env.example .env
 # Edit .env with your values
 
-# Seed articles (requires OPENAI_API_KEY)
+# Seed articles (requires CLAUDE_API_KEY)
 node scripts/bulk-seed.mjs
 
 # Start development server
@@ -80,7 +80,7 @@ glucose-managed/
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `OPENAI_API_KEY` | Yes (for seeding) | OpenAI API key |
+| `CLAUDE_API_KEY` | Yes (for seeding) | OpenAI API key |
 | `OPENAI_MODEL` | No | Model name (default: `gpt-4.1-mini`) |
 | `DATABASE_URL` | No | PostgreSQL connection string |
 | `AMAZON_ASSOCIATE_TAG` | No | Amazon affiliate tag |

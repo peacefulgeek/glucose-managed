@@ -148,7 +148,7 @@ async function main() {
   const { query, initDb } = await import('../src/lib/db.mjs');
 
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY,
     baseURL: process.env.OPENAI_BASE_URL || undefined,
   });
 
@@ -181,7 +181,7 @@ async function main() {
           max_tokens: 4000,
         });
 
-        const raw = response.choices[0].message.content.trim();
+        const raw = response.content[0].text.trim();
         const jsonStr = raw.replace(/^```json?\n?/, '').replace(/\n?```$/, '');
         const parsed = JSON.parse(jsonStr);
 

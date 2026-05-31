@@ -17,7 +17,7 @@ const ARTICLES_PER_DAY = 5;
 const BASE_DATE = new Date('2025-01-01');
 
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.CLAUDE_API_KEY || process.env.ANTHROPIC_API_KEY,
   baseURL: 'https://api.openai.com/v1',
 });
 
@@ -114,7 +114,7 @@ Write the full article now, starting with ## TL;DR`;
     max_tokens: 3500,
     temperature: 0.72,
   });
-  return response.choices[0].message.content;
+  return response.content[0].text;
 }
 
 function extractFaqs(body) {
