@@ -1,4 +1,4 @@
-import { ssrHeadMiddleware } from "../ssrHead";
+import { ssrHeadMiddleware } from "./ssrHead";
 import express from 'express';
 import compression from 'compression';
 import fs from 'fs';
