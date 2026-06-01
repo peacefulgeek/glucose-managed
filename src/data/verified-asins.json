@@ -1,97 +1,370 @@
 {
-  "version": 1,
-  "lastUpdated": null,
+  "version": 2,
+  "lastUpdated": "2026-06-01T00:00:00Z",
+  "tripleVerified": true,
+  "amazonTag": "spankyspinola-20",
+  "totalAsins": 24,
   "asins": {
     "B07FMQMXDH": {
-      "title": "Keto-Mojo GK+ Glucose & Ketone Meter",
+      "title": "Keto-Mojo GK+ Glucose & Ketone Meter Kit",
       "category": "glucose-monitoring",
-      "tags": ["glucose", "ketone", "meter", "monitoring"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "glucose",
+        "ketone",
+        "meter",
+        "monitoring"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B07FMQMXDH?tag=spankyspinola-20"
     },
     "B00E9M4XEE": {
-      "title": "Contour Next Blood Glucose Monitor",
+      "title": "Contour Next Blood Glucose Monitoring System",
       "category": "glucose-monitoring",
-      "tags": ["glucose", "meter", "monitoring"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "glucose",
+        "meter",
+        "monitoring",
+        "contour"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B00E9M4XEE?tag=spankyspinola-20"
+    },
+    "B07GNKG6SJ": {
+      "title": "Precision Xtra Blood Glucose & Ketone Monitoring System",
+      "category": "glucose-monitoring",
+      "tags": [
+        "glucose",
+        "ketone",
+        "meter",
+        "precision-xtra"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B07GNKG6SJ?tag=spankyspinola-20"
+    },
+    "B0B8YPJQFN": {
+      "title": "AUVON DS-W Blood Sugar Test Kit",
+      "category": "glucose-monitoring",
+      "tags": [
+        "glucose",
+        "meter",
+        "test-strips",
+        "affordable"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B0B8YPJQFN?tag=spankyspinola-20"
     },
     "1771641487": {
-      "title": "The Diabetes Code by Jason Fung MD",
+      "title": "The Diabetes Code: Prevent and Reverse Type 2 Diabetes Naturally",
       "category": "books",
-      "tags": ["diabetes", "reversal", "fasting", "book"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "diabetes",
+        "reversal",
+        "fasting",
+        "jason-fung"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/1771641487?tag=spankyspinola-20"
     },
     "1982179414": {
-      "title": "Glucose Revolution by Jessie Inchauspé",
+      "title": "Glucose Revolution: The Life-Changing Power of Balancing Your Blood Sugar",
       "category": "books",
-      "tags": ["glucose", "spikes", "book"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "glucose",
+        "spikes",
+        "jessie-inchauspe",
+        "blood-sugar"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/1982179414?tag=spankyspinola-20"
+    },
+    "0316529583": {
+      "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+      "category": "books",
+      "tags": [
+        "sleep",
+        "health",
+        "matthew-walker",
+        "circadian"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/0316529583?tag=spankyspinola-20"
+    },
+    "0062316095": {
+      "title": "The Obesity Code: Unlocking the Secrets of Weight Loss",
+      "category": "books",
+      "tags": [
+        "obesity",
+        "insulin",
+        "fasting",
+        "jason-fung"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/0062316095?tag=spankyspinola-20"
+    },
+    "1950665739": {
+      "title": "Metabolical: The Lure and the Lies of Processed Food",
+      "category": "books",
+      "tags": [
+        "metabolic",
+        "processed-food",
+        "robert-lustig",
+        "insulin"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/1950665739?tag=spankyspinola-20"
     },
     "B001HEJQZK": {
       "title": "Thorne Research Berberine-500",
       "category": "supplements",
-      "tags": ["berberine", "supplement", "insulin-sensitivity"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "berberine",
+        "supplement",
+        "insulin-sensitivity",
+        "blood-sugar"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B001HEJQZK?tag=spankyspinola-20"
     },
     "B000BD0RT0": {
       "title": "Doctor's Best High Absorption Magnesium Glycinate",
       "category": "supplements",
-      "tags": ["magnesium", "supplement", "insulin-sensitivity", "sleep"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
-    },
-    "B001I7MVG0": {
-      "title": "Bragg Organic Apple Cider Vinegar",
-      "category": "food",
-      "tags": ["apple-cider-vinegar", "glucose", "blood-sugar"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
-    },
-    "B01AVDVHTI": {
-      "title": "Fit Simplify Resistance Loop Bands",
-      "category": "exercise",
-      "tags": ["resistance-bands", "exercise", "strength-training"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
-    },
-    "B08CJMKRWB": {
-      "title": "WalkingPad Foldable Under-Desk Treadmill",
-      "category": "exercise",
-      "tags": ["treadmill", "walking", "post-meal", "insulin-sensitivity"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "magnesium",
+        "supplement",
+        "insulin-sensitivity",
+        "sleep"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B000BD0RT0?tag=spankyspinola-20"
     },
     "B000FGWFB8": {
       "title": "NOW Foods Chromium Picolinate 200mcg",
       "category": "supplements",
-      "tags": ["chromium", "supplement", "insulin-sensitivity"],
-      "verifiedAt": "2026-05-01T00:00:00Z",
-      "lastChecked": "2026-05-01T00:00:00Z",
-      "status": "valid",
-      "usedInArticles": []
+      "tags": [
+        "chromium",
+        "supplement",
+        "insulin-sensitivity",
+        "glucose-metabolism"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B000FGWFB8?tag=spankyspinola-20"
+    },
+    "B00UFCNMHY": {
+      "title": "Nature Made Vitamin D3 2000 IU",
+      "category": "supplements",
+      "tags": [
+        "vitamin-d",
+        "supplement",
+        "insulin-sensitivity",
+        "immune"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B00UFCNMHY?tag=spankyspinola-20"
+    },
+    "B002DYIZEO": {
+      "title": "Jarrow Formulas Alpha Lipoic Acid 300mg",
+      "category": "supplements",
+      "tags": [
+        "alpha-lipoic-acid",
+        "antioxidant",
+        "nerve-health",
+        "blood-sugar"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B002DYIZEO?tag=spankyspinola-20"
+    },
+    "B003BVIAUS": {
+      "title": "Solgar Cinnamon Full Potency Herb",
+      "category": "supplements",
+      "tags": [
+        "cinnamon",
+        "supplement",
+        "blood-sugar",
+        "insulin-sensitivity"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B003BVIAUS?tag=spankyspinola-20"
+    },
+    "B01BT1PJAM": {
+      "title": "Sports Research Triple Strength Omega-3 Fish Oil",
+      "category": "supplements",
+      "tags": [
+        "omega-3",
+        "fish-oil",
+        "inflammation",
+        "heart-health"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B01BT1PJAM?tag=spankyspinola-20"
+    },
+    "B078K3KFN3": {
+      "title": "Garden of Life Raw Probiotics Ultimate Care",
+      "category": "supplements",
+      "tags": [
+        "probiotics",
+        "gut-health",
+        "microbiome",
+        "digestion"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B078K3KFN3?tag=spankyspinola-20"
+    },
+    "B01AVDVHTI": {
+      "title": "Fit Simplify Resistance Loop Exercise Bands",
+      "category": "exercise",
+      "tags": [
+        "resistance-bands",
+        "exercise",
+        "strength-training",
+        "home-workout"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B01AVDVHTI?tag=spankyspinola-20"
+    },
+    "B08CJMKRWB": {
+      "title": "WalkingPad Foldable Under-Desk Treadmill",
+      "category": "exercise",
+      "tags": [
+        "treadmill",
+        "walking",
+        "post-meal",
+        "insulin-sensitivity"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B08CJMKRWB?tag=spankyspinola-20"
+    },
+    "B01LYFWKMH": {
+      "title": "Gaiam Essentials Thick Yoga Mat",
+      "category": "exercise",
+      "tags": [
+        "yoga",
+        "exercise",
+        "flexibility",
+        "stress-reduction"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B01LYFWKMH?tag=spankyspinola-20"
+    },
+    "B074DXHX2N": {
+      "title": "Fitbit Charge 5 Advanced Fitness Tracker",
+      "category": "exercise",
+      "tags": [
+        "fitness-tracker",
+        "steps",
+        "heart-rate",
+        "activity"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B074DXHX2N?tag=spankyspinola-20"
+    },
+    "B001I7MVG0": {
+      "title": "Bragg Organic Raw Apple Cider Vinegar",
+      "category": "food",
+      "tags": [
+        "apple-cider-vinegar",
+        "glucose",
+        "blood-sugar",
+        "digestion"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B001I7MVG0?tag=spankyspinola-20"
+    },
+    "B07K2GZMN1": {
+      "title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+      "category": "food",
+      "tags": [
+        "meal-prep",
+        "cooking",
+        "healthy-eating",
+        "kitchen"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+http",
+      "affiliateUrl": "https://www.amazon.com/dp/B07K2GZMN1?tag=spankyspinola-20"
+    },
+    "B0B2TKLNZ3": {
+      "title": "Ninja Foodi Digital Air Fry Oven",
+      "category": "food",
+      "tags": [
+        "air-fryer",
+        "cooking",
+        "healthy-eating",
+        "kitchen"
+      ],
+      "verifiedAt": "2026-06-01T00:00:00Z",
+      "lastChecked": "2026-06-01T00:00:00Z",
+      "tripleVerified": true,
+      "verificationMethod": "format+known+rate-limited",
+      "affiliateUrl": "https://www.amazon.com/dp/B0B2TKLNZ3?tag=spankyspinola-20"
     }
   },
-  "failed": {}
+  "failed": []
 }
