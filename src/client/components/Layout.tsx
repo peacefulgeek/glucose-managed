@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { MobileHeader } from './MobileHeader';
 import { Footer } from './Footer';
+import NewsletterPopup from "./NewsletterPopup";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -59,6 +60,7 @@ export function Layout({ children }: LayoutProps) {
 
         <Footer />
       </div>
+      <NewsletterPopup />
     </div>
   );
 }
